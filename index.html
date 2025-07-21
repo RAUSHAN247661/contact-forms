@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Contact Form</title>
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400;600&display=swap" rel="stylesheet">
+    <style>
+        body {
+            min-height: 100vh;
+            background: linear-gradient(135deg, #a8edea 0%, #fed6e3 100%);
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            font-family: 'Inter', Arial, sans-serif;
+            margin: 0;
+        }
+        .contact-container {
+            width: 100%;
+            max-width: 600px;
+            background: #fff;
+            border-radius: 18px;
+            box-shadow: 0 8px 32px rgba(60, 72, 100, 0.18);
+            padding: 48px 40px 40px 40px;
+            margin: 10px 0;
+            animation: fadeIn 0.5s ease-in-out;
+            box-sizing: border-box;
+        }
+        @keyframes fadeIn {
+            from { opacity: 0; transform: translateY(20px); }
+            to { opacity: 1; transform: translateY(0); }
+        }
+        .contact-header {
+            text-align: center;
+            margin-bottom: 28px;
+            margin-top: -20px;
+        }
+        .contact-header h1 {
+            color: #232946;
+            font-size: 2rem;
+            font-weight: 600;
+            margin-bottom: 8px;
+            letter-spacing: 0.5px;
+            background: linear-gradient(90deg, #f12043 0%, #126dff 100%);
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            background-clip: text;
+            text-fill-color: transparent;
+        }
+        .contact-header p {
+            color: #6b7280;
+            font-size: 1rem;
+        }
+        .contact-form .form-group {
+            margin-bottom: 20px;
+        }
+        .contact-form label {
+            display: block;
+            margin-bottom: 7px;
+            color: #232946;
+            font-weight: 600;
+            font-size: 0.98rem;
+            letter-spacing: 0.2px;
+        }
+        .contact-form input,
+        .contact-form textarea {
+            width: 100%;
+            padding: 15px 18px;
+            border: 1.5px solid #e5e7eb;
+            border-radius: 9px;
+            font-size: 1rem;
+            background: #f7f8fa;
+            color: #232946;
+            transition: border 0.2s, box-shadow 0.2s, background 0.2s;
+            box-sizing: border-box;
+        }
+        .contact-form input:focus,
+        .contact-form textarea:focus {
+            border-color: #f797a7;
+            box-shadow: 0 0 0 3px rgba(247, 151, 167, 0.13);
+            background: #fff;
+            outline: none;
+        }
+        .contact-form textarea {
+            min-height: 110px;
+            resize: vertical;
+        }
+        .submit-btn {
+            background: linear-gradient(90deg, #f63624 0%, #2a7cff 100%);
+            color: #fff;
+            border: none;
+            padding: 18px 0;
+            font-size: 1.08rem;
+            font-weight: 600;
+            border-radius: 9px;
+            cursor: pointer;
+            width: 100%;
+            transition: background 0.2s, transform 0.1s, box-shadow 0.2s;
+            text-transform: uppercase;
+            letter-spacing: 1px;
+            box-shadow: 0 2px 8px rgba(99, 102, 241, 0.08);
+        }
+        .submit-btn:hover, .submit-btn:focus {
+            background: linear-gradient(90deg, #3a3c3e 0%, #72f11d 100%);
+            transform: translateY(-2px) scale(1.02);
+            box-shadow: 0 6px 18px rgba(99, 102, 241, 0.13);
+        }
+        .submit-btn:active {
+            transform: translateY(0) scale(0.98);
+        }
+        @media (max-width: 900px) {
+            .contact-container {
+                max-width: 90vw;
+                padding: 36px 24px 28px 24px;
+                margin-left: 0;
+                margin-right: 0;
+            }
+        }
+        @media (max-width: 600px) {
+            .contact-container {
+                padding: 18px 4vw 18px 4vw;
+                max-width: 98vw;
+                margin-left: 4vw;
+                margin-right: 4vw;
+            }
+            .contact-header h1 {
+                font-size: 1.3rem;
+            }
+            .contact-form input,
+            .contact-form textarea {
+                font-size: 0.98rem;
+                padding: 13px 12px;
+            }
+            .submit-btn {
+                font-size: 1rem;
+                padding: 15px 0;
+            }
+        }
+        @media (max-width: 400px) {
+            .contact-container {
+                padding: 10px 2vw 10px 2vw;
+                margin-left: 2vw;
+                margin-right: 2vw;
+            }
+            .contact-header {
+                margin-top: 25px;
+            }
+            .contact-header h1 {
+                font-size: 1.1rem;
+            }
+        }
+        .discount-banner {
+            display: flex;
+            justify-content: center;
+            align-items: center;
+            background: linear-gradient(90deg, #f12043 0%, #126dff 100%);
+            color: #fff;
+            font-weight: 600;
+            font-size: 1.08rem;
+            border-radius: 8px;
+            padding: 12px 18px;
+            margin: 0 0 22px 0;
+            box-shadow: 0 2px 8px rgba(241,32,67,0.08);
+            text-align: center;
+            letter-spacing: 0.5px;
+        }
+        @media (max-width: 600px) {
+            .discount-banner {
+                font-size: 0.98rem;
+                padding: 10px 8px;
+            }
+        }
+    </style>
+</head>
+<body>
+    <div class="contact-container">
+        <div class="contact-header">
+            <h1>Buy Now</h1>
+            <p>Fill out the form below and Book your order quickly , we'll get back to you as soon as possible.</p>
+        </div>
+        <div class="discount-banner">
+            <span>🎉 <strong>90% Discount</strong> only for the first 100 users!</span>
+        </div>
+        
+        <form class="contact-form" action="https://api.web3forms.com/submit" method="POST">
+
+            <input type="hidden" name="access_key" value="7ebff16a-a699-49ec-a506-0bdbc588b210">
+
+            <div class="form-group">
+                <label for="name">Full Name</label>
+                <input type="text" id="name" name="name" placeholder="Enter your full name" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="email">Email Address</label>
+                <input type="email" id="email" name="email" placeholder="Enter your email address" required>
+            </div>
+            
+            <div class="form-group">
+                <label for="phone">Phone Number</label>
+                <input type="tel" id="phone" name="phone" placeholder="Enter your phone number">
+            </div>
+            
+            <div class="form-group">
+                <label for="product">Select Product</label>
+                <select id="product" name="product" required style="width: 100%; padding: 15px 18px; border: 1.5px solid #e5e7eb; border-radius: 9px; font-size: 1rem; background: #f7f8fa; color: #232946; transition: border 0.2s, box-shadow 0.2s, background 0.2s; box-sizing: border-box;">
+                    <option value="" disabled selected>Select a product</option>
+                    <option value="CapCut Pro">CapCut Pro</option>
+                    <option value="Inshot Pro">Inshot Pro</option>
+                    <option value="Kinemaster Pro">Kinemaster Pro</option>
+                </select>
+            </div>
+            
+            <button type="submit" class="submit-btn">Order Now</button>
+        </form>
+    </div>
+</body>
+</html>
